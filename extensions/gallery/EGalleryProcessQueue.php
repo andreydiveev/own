@@ -12,10 +12,13 @@ if ($argc === 4 && strstr($argv[0], basename(__FILE__))) {
 	
 	include(realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR.'EGalleryThumbGenerator.php');
 
+    $config = include(realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'main.php');
+
 	$generator = new EGalleryThumbGenerator;
+
 	$generator->directory = $argv[1];
-	$generator->thumbnailWidth = is_int($argv[2]) ? $argv[2] : 128;
-	$generator->thumbnailHeight = is_int($argv[3]) ? $argv[3] : 128;
+	$generator->thumbnailWidth = $config['thumbnailWidth'];
+	$generator->thumbnailHeight = $config['thumbnailHeight'];
 
 	while (($i = $generator->processImages()) > 0)
 	{

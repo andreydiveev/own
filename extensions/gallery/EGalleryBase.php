@@ -532,6 +532,7 @@ class EGalleryBase extends CWidget {
 		else:
 			$i = 1;
 			$fp = fopen($file, 'r');
+            $buffer = '';
 
 			while (!feof($fp))
 			{

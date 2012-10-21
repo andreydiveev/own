@@ -1,3 +1,5 @@
+<?php $config = include(realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR.'../config'.DIRECTORY_SEPARATOR.'main.php');?>
+
 <?php echo '#'.$this->id; ?> ul.egallery {list-style: none}
 
 <?php echo '#'.$this->id;?> ul.egallery li a {display: block}
@@ -16,7 +18,7 @@
 	padding: 5px;
 	position: relative;
 	text-align: center;
-	width: 138px;
+	width: <?=$config['thumbnailWidth']+10?>px;
 	overflow: hidden
 }
 

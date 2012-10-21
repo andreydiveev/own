@@ -33,7 +33,7 @@
 	<?php
 	$i=1;
 	foreach($images as $image): ?>
-		<li<?php if($imagesPerRow!=0 && $i%$imagesPerRow==1) echo ' class="newRow"'; ?>><a href="<?php echo $image['url']; ?>" title="<?php echo $image['alt']; ?>"><img src="<?php echo $image['thumb']; ?>" alt="<?php echo $image['alt']; ?>" /><?php echo $image['alt']; ?></a></li>
+		<li<?php if($imagesPerRow!=0 && $i%$imagesPerRow==1) echo ' class="newRow"'; ?>><a rel="lightbox[roadtrip]" href="<? echo $image['url']; ?>" title="<?php echo $image['alt']; ?>"><img src="<?php echo $image['thumb']; ?>" alt="<?php echo $image['alt']; ?>" /><?php echo $image['alt']; ?></a></li>
 	<?php
 		$i++;
 	endforeach; ?>

@@ -76,6 +76,19 @@ class EGallery extends EGalleryBase {
 	 * Publish images and CSS.
 	 */
 	public function init(){
+
+        $cs=Yii::app()->clientScript;
+        $am = Yii::app()->getAssetManager();
+
+        $lightbox = $am->publish(dirname(__FILE__).DIRECTORY_SEPARATOR.'lightbox');
+        //$jquery = $am->publish(dirname(__FILE__).DIRECTORY_SEPARATOR.'lightbox'.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'jquery-1.7.2.min.js');
+        //$lightbox_js = $am->publish(dirname(__FILE__).DIRECTORY_SEPARATOR.'lightbox'.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'lightbox.js');
+        //$lightbox_css = $am->publish(dirname(__FILE__).DIRECTORY_SEPARATOR.'lightbox'.DIRECTORY_SEPARATOR.'css'.DIRECTORY_SEPARATOR.'lightbox.css');
+
+        $cs->registerScriptFile($lightbox.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'jquery-1.7.2.min.js');
+        $cs->registerScriptFile($lightbox.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'lightbox.js');
+        $cs->registerCssFile($lightbox.DIRECTORY_SEPARATOR.'css'.DIRECTORY_SEPARATOR.'lightbox.css');
+
 		parent::setup();
 	}
 
