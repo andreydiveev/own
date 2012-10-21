@@ -8,7 +8,7 @@ $this->widget('application.extensions.gallery.EGallery',
     array(
         'path' => '/images/gallery',
         'imagesPerRow'=>3,
-        'name'=>'Demotivators',
+        'name'=>'Image Mob',
         // 'other' => 'properties',
     )
 );
