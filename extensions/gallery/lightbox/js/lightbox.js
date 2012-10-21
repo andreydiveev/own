@@ -116,7 +116,9 @@ lightbox = new Lightbox options
       }).append($('<span/>', {
         "class": 'lb-caption'
       }), $('<span/>', {
-        "class": 'lb-number'
+          "class": 'lb-number'
+      })), $('<span/>', {
+          "class": 'lb-number'
       })), $('<div/>', {
         "class": 'lb-closeContainer'
       }).append($('<a/>', {
